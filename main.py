@@ -5,7 +5,7 @@ Date: 21.03.2023
 
 import pickle
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from pydantic import BaseModel
 from train_predict.predict import inference
 from train_predict.utils import preprocess_data
