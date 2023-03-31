@@ -6,3 +6,5 @@ requests
 fastapi
 uvicorn
 gunicorn
+pytest
+httpx
