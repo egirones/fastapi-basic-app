@@ -1,0 +1,17 @@
+Test for education
+Some-college: precision is 0.6986301369863014, recall is 0.5523465703971119. fbeta is 0.6169354838709677
+HS-grad: precision is 0.6591928251121076, recall is 0.4260869565217391. fbeta is 0.5176056338028168
+Bachelors: precision is 0.7638888888888888, recall is 0.7333333333333333. fbeta is 0.7482993197278911
+Masters: precision is 0.8349056603773585, recall is 0.855072463768116. fbeta is 0.8448687350835322
+Assoc-acdm: precision is 0.7297297297297297, recall is 0.574468085106383. fbeta is 0.6428571428571429
+7th-8th: precision is 1.0, recall is 0.16666666666666666. fbeta is 0.2857142857142857
+11th: precision is 1.0, recall is 0.2727272727272727. fbeta is 0.42857142857142855
+Assoc-voc: precision is 0.66, recall is 0.5238095238095238. fbeta is 0.584070796460177
+Prof-school: precision is 0.8210526315789474, recall is 0.9285714285714286. fbeta is 0.8715083798882681
+9th: precision is 1.0, recall is 0.3333333333333333. fbeta is 0.5
+5th-6th: precision is 1.0, recall is 0.5. fbeta is 0.6666666666666666
+10th: precision is 0.3333333333333333, recall is 0.16666666666666666. fbeta is 0.2222222222222222
+Doctorate: precision is 0.847457627118644, recall is 0.8771929824561403. fbeta is 0.8620689655172413
+12th: precision is 1.0, recall is 0.4. fbeta is 0.5714285714285715
+1st-4th: precision is 1.0, recall is 1.0. fbeta is 1.0
+Preschool: precision is 1.0, recall is 1.0. fbeta is 1.0
