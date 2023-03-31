@@ -20,14 +20,14 @@ def inference(model, X):
         lb = pickle.load(pickle_file)
     with open("./model/encoder.pkl", 'rb') as pickle_file:
         encoder = pickle.load(pickle_file)
-    
+
     X_categorical = X[cat_features].values
     X_continuous = X.drop(*[cat_features], axis=1)
 
     X_categorical = encoder.transform(X_categorical)
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
-    
+
     prediction = model.predict(X)
 
     return {"prediction": lb.classes_[prediction][0]}

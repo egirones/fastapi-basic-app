@@ -3,6 +3,8 @@ from sklearn.metrics import fbeta_score, precision_score, recall_score
 import pickle
 
 # Optional: implement hyperparameter tuning.
+
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -20,7 +22,7 @@ def train_model(X_train, y_train):
     """
 
     rf = RandomForestClassifier()
-    
+
     rf.fit(X_train, y_train)
 
     print("model trained")
@@ -47,5 +49,3 @@ def compute_model_metrics(y, preds):
     precision = precision_score(y, preds, zero_division=1)
     recall = recall_score(y, preds, zero_division=1)
     return precision, recall, fbeta
-
-

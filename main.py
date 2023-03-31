@@ -1,3 +1,8 @@
+"""
+Name: Edgar Gironés
+Date: 21.03.2023
+"""
+
 import pickle
 import uvicorn
 from fastapi import FastAPI
@@ -6,6 +11,7 @@ import numpy as np
 import pandas as pd
 from train_predict.predict import inference
 from train_predict.utils import preprocess_data
+
 
 class ItemToPredict(BaseModel):
     age: int
@@ -24,11 +30,10 @@ class ItemToPredict(BaseModel):
     native_country: str
 
 
-
 with open("./model/model.pkl", 'rb') as pickle_file:
     model = pickle.load(pickle_file)
 with open("./model/encoder.pkl", 'rb') as pickle_file:
-        encoder = pickle.load(pickle_file)
+    encoder = pickle.load(pickle_file)
 
 app = FastAPI()
 

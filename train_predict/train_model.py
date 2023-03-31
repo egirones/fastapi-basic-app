@@ -13,7 +13,8 @@ df = pd.read_csv("./data/census.csv")
 # remove column spaces
 df.columns = df.columns.str.replace(' ', '')
 
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross validation instead of a
+# train-test split.
 train, test = train_test_split(df, test_size=0.20)
 
 
@@ -29,16 +30,16 @@ cat_features = [
 ]
 
 X_train, y_train, encoder, lb = process_data(
-    train, 
-    categorical_features=cat_features, 
-    label="salary", 
+    train,
+    categorical_features=cat_features,
+    label="salary",
     training=True
 )
 
 # Proces the test data with the process_data function.
 X_test, y_test, encoder, lb = process_data(
-    test, 
-    categorical_features=cat_features, 
+    test,
+    categorical_features=cat_features,
     label="salary",
     training=False,
     encoder=encoder,
