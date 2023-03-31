@@ -1,7 +1,7 @@
 """
 Name: Edgar Gironés
 Date: 21.03.2023
-Package to preprocess data for ML 
+Package to preprocess data
 """
 import pandas as pd
 

@@ -76,11 +76,10 @@ def run_sanity_check(test_dir):
             source = inspect.getsource(getattr(module, func))
             if source.find('.status_code') != -1:
                 TEST_FOR_GET_METHOD_RESPONSE_CODE = True
-            if (
-                source.find('.json') != -1
-                ) or (
-                source.find('json.loads') != -1
-                ):
+            if (source.
+                    find('.json') != -1) or (
+                    source.
+                    find('json.loads') != -1):
                 TEST_FOR_GET_METHOD_RESPONSE_BODY = True
 
         if not TEST_FOR_GET_METHOD_RESPONSE_CODE:
@@ -136,7 +135,10 @@ def run_sanity_check(test_dir):
             source = inspect.getsource(getattr(module, func))
             if source.find('.status_code') != -1:
                 TEST_FOR_POST_METHOD_RESPONSE_CODE = True
-            if (source.find('.json') != -1) or (source.find('json.loads') != -1):
+            if (source.
+                    find('.json') != -1) or (
+                source.
+                    find('json.loads') != -1):
                 TEST_FOR_POST_METHOD_RESPONSE_BODY = True
                 COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT += 1
 
@@ -154,8 +156,8 @@ def run_sanity_check(test_dir):
                 FAIL_COLOR +
                 "One or more of your test cases for POST() do\
                     not seem to be testing the contents of the response.\n")
-        if len(test_functions_for_post
-            ) >= 2 and COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT < 2:
+        len_test = len(test_functions_for_post)
+        if len_test >= 2 and COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT < 2:
             print(FAIL_COLOR + f"[{WARNING_COUNT}]")
             WARNING_COUNT += 1
             print(
