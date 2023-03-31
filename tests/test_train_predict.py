@@ -19,5 +19,5 @@ def test_convert_numpy(data_dict):
 
 def test_api_get_root():
     r = client.get("/")
-    assert r.json() ==  {"message":"Hello World"}
+    assert r.json() == {"message": "Hello World"}
     assert r.status_code == 200

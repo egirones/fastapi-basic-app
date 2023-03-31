@@ -36,7 +36,7 @@ def inference(model, X):
         lb = pickle.load(pickle_file)
 
     X_np = convert_to_numpy(X)
-    
+
     prediction = model.predict(X_np)
 
     return {"prediction": lb.classes_[prediction][0]}

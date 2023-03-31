@@ -5,7 +5,7 @@ Date: 21.03.2023
 
 import pickle
 import uvicorn
-from fastapi import FastAPI, status
+from fastapi import FastAPI
 from pydantic import BaseModel
 from train_predict.predict import inference
 from train_predict.utils import preprocess_data
@@ -33,7 +33,19 @@ with open("./model/model.pkl", 'rb') as pickle_file:
 with open("./model/encoder.pkl", 'rb') as pickle_file:
     encoder = pickle.load(pickle_file)
 
-app = FastAPI()
+description = """
+    Basic API API helps you do awesome ML. 🚀
+
+    ## Predict
+
+    Allows you to predict the salary based on personal information.
+    See below for more option
+    """
+
+app = FastAPI(
+    title="Basic API",
+    description=description
+)
 
 
 @app.get("/")

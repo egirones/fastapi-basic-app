@@ -41,13 +41,15 @@ def compute_metrics_per_slice(feature="education"):
             label_b=lb)
 
         y_pred = model.predict(X_test)
-        metrics = compute_model_metrics(y_test, y_pred)
-        results.append(f"{s}: precision is {metrics[0]}, recall is {metrics[1]}. fbeta is {metrics[2]}\n")
+        met = compute_model_metrics(y_test, y_pred)
+        results.append(
+            f"{s}: precision {met[0]}, recall {met[1]}. fbeta {met[2]}\n"
+        )
 
     for result in results:
         print(result)
 
-    with open(f"./metrics/slice_output.txt", "w") as f:
+    with open("./metrics/slice_output.txt", "w") as f:
         f.writelines(results)
 
 
