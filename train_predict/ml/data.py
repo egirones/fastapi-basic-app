@@ -14,23 +14,29 @@ def process_data(
         training=True,
         encoder=None,
         label_b=None):
-    """ Process the data used in the machine learning pipeline.
-
-    Processes the data using one hot encoding for the categorical features and a
-    label binarizer for the labels. This can be used in either training or
+    """ 
+    Process the data used in the machine learning pipeline.
+    Processes the data using one hot encoding 
+    for the categorical features and a
+    label binarizer for the labels. This 
+    can be used in either training or
     inference/validation.
 
-    Note: depending on the type of model used, you may want to add in functionality that
+    Note: depending on the type of model used, 
+    you may want to add in functionality that
     scales the continuous data.
 
     Inputs
     ------
     X : pd.DataFrame
-        Dataframe containing the features and label. Columns in `categorical_features`
+        Dataframe containing the features and label. 
+        Columns in `categorical_features`
     categorical_features: list[str]
-        List containing the names of the categorical features (default=[])
+        List containing the names of the categorical 
+        features (default=[])
     label : str
-        Name of the label column in `X`. If None, then an empty array will be returned
+        Name of the label column in `X`. If None, 
+        then an empty array will be returned
         for y (default=None)
     training : bool
         Indicator if training mode or inference/validation mode.
@@ -44,12 +50,15 @@ def process_data(
     DF : np.array
         Processed data.
     y : np.array
-        Processed labels if labeled=True, otherwise empty np.array.
+        Processed labels if labeled=True, 
+        otherwise empty np.array.
     encoder : sklearn.preprocessing._encoders.OneHotEncoder
-        Trained OneHotEncoder if training is True, otherwise returns the encoder passed
+        Trained OneHotEncoder if training is True, 
+        otherwise returns the encoder passed
         in.
     label_b : sklearn.preprocessing._label.LabelBinarizer
-        Trained LabelBinarizer if training is True, otherwise returns the binarizer
+        Trained LabelBinarizer if training is True, 
+        otherwise returns the binarizer
         passed in.
     """
 

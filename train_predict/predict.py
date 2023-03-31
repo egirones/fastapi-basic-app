@@ -1,5 +1,5 @@
 import pickle
-from train_predict.train_model import process_data, cat_features
+from train_predict.train_model import cat_features
 import numpy as np
 
 
