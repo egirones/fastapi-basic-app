@@ -19,7 +19,7 @@ df.columns = df.columns.str.replace(' ', '')
 
 # Optional enhancement, use K-fold cross validation instead of a
 # train-test split.
-train, test = train_test_split(df, test_size=0.20)
+train, test = train_test_split(df, test_size=0.20, random_state=42)
 
 cat_features = [
     "workclass",
