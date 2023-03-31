@@ -1,14 +1,19 @@
+"""
+Name: Edgar Gironés
+Date: 21.03.2023
+Module to process data
+"""
 import numpy as np
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 
 
 def process_data(
         df,
-        categorical_features=[],
+        categorical_features=list,
         label=None,
         training=True,
         encoder=None,
-        lb=None):
+        label_b=None):
     """ Process the data used in the machine learning pipeline.
 
     Processes the data using one hot encoding for the categorical features and a
@@ -43,7 +48,7 @@ def process_data(
     encoder : sklearn.preprocessing._encoders.OneHotEncoder
         Trained OneHotEncoder if training is True, otherwise returns the encoder passed
         in.
-    lb : sklearn.preprocessing._label.LabelBinarizer
+    label_b : sklearn.preprocessing._label.LabelBinarizer
         Trained LabelBinarizer if training is True, otherwise returns the binarizer
         passed in.
     """
@@ -59,16 +64,16 @@ def process_data(
 
     if training is True:
         encoder = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
-        lb = LabelBinarizer()
+        label_b = LabelBinarizer()
         X_categorical = encoder.fit_transform(X_categorical)
-        y = lb.fit_transform(y.values).ravel()
+        y = label_b.fit_transform(y.values).ravel()
     else:
         X_categorical = encoder.transform(X_categorical)
         try:
-            y = lb.transform(y.values).ravel()
+            y = label_b.transform(y.values).ravel()
         # Catch the case where y is None because we're doing inference.
         except AttributeError:
             pass
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
-    return X, y, encoder, lb
+    return X, y, encoder, label_b

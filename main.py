@@ -7,8 +7,6 @@ import pickle
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-import numpy as np
-import pandas as pd
 from train_predict.predict import inference
 from train_predict.utils import preprocess_data
 

@@ -1,3 +1,9 @@
+"""
+Name: Edgar Gironés
+Date: 21.03.2023
+Package to model data
+"""
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 import pickle
