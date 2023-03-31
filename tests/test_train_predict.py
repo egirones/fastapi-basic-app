@@ -21,3 +21,8 @@ def test_api_get_root():
     r = client.get("/")
     assert r.json() == {"message": "Hello World"}
     assert r.status_code == 200
+
+
+def test_cannot_get_predict():
+    r = client.get("/predict")
+    assert r.status_code != 200
