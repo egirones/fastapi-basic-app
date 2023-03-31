@@ -11,16 +11,19 @@
        'marital-status', 'occupation', 'relationship', 'race', 'sex',
        'capital-gain', 'capital-loss', 'hours-per-week', 'native-country'
 * y_data = 'salary'
-* 26048 entries for training, 6513 for test.
+* 26048 entries for training
+
+## Validation Data
+* Data consisted of 6513 entries.
 
 ## Metrics
 Metrics used in this model:
-* Precision 0.7444113263785395
-* Recall 0.6359007001909611
-* fbeta 0.685890834191555
+* The precision of this model is 0.7444113263785395
+* The recall of this model is 0.6359007001909611
+* The fbeta of this model 0.685890834191555
 
 ## Ethical Considerations
-* None, data as anonymized
+* Using the model does not pose any ethical consideration. However, it raises some ethical concerns about how minorities generally have less income that caucasicans.
 
 ## Caveats and Recommendations
 * Model could be improved, but the main objective is to deploy a model using API.
