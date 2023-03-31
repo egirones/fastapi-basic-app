@@ -1,4 +1,0 @@
-"""
-Logging module
-"""
-import logging

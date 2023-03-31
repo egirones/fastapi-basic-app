@@ -6,6 +6,7 @@ Package to preprocess data for ML
 
 import pandas as pd
 
+
 def preprocess_data(input_data):
     """
     Input: Receives input data
