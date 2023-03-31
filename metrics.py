@@ -46,9 +46,6 @@ def compute_metrics_per_slice(feature="education"):
             f"{s}: precision {met[0]}, recall {met[1]}. fbeta {met[2]}\n"
         )
 
-    for result in results:
-        print(result)
-
     with open("./metrics/slice_output.txt", "w") as f:
         f.writelines(results)
 

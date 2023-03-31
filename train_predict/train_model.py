@@ -7,7 +7,7 @@ Module to train data
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from train_predict.ml.data import process_data
-from train_predict.ml.model import train_model, compute_model_metrics
+from train_predict.ml.model import train_model
 from train_predict.ml.utils import save_pickle
 
 # Add the necessary imports for the starter code.
@@ -54,7 +54,6 @@ model_trained = train_model(X_train, y_train)
 
 pred = model_trained.predict(X_test)
 
-print(compute_model_metrics(y_test, pred))
 
 save_pickle("model", model_trained)
 save_pickle("encoder", encoder)

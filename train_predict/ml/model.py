@@ -29,7 +29,6 @@ def train_model(X_train, y_train):
 
     rf.fit(X_train, y_train)
 
-    print("model trained")
     return rf
 
 

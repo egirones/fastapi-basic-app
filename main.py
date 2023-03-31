@@ -29,20 +29,22 @@ class ItemToPredict(BaseModel):
 
     class Config:
         schema_extra = {
-            "age": 25,
-            "workclass": "Private",
-            "fnlgt": "12387132",
-            "education": "Bachelors",
-            "education_num": 12,
-            "marital_status": "Divorced",
-            "occupation": "Prof-speciality",
-            "relationship": "Husband",
-            "race": "White",
-            "sex": "Male",
-            "capital_gain": 0,
-            "capital_loss": 35,
-            "hours_per_week": 36,
-            "native_country": "India"
+            "example": {
+                "age": 25,
+                "workclass": "Private",
+                "fnlgt": "12387132",
+                "education": "Bachelors",
+                "education_num": 12,
+                "marital_status": "Divorced",
+                "occupation": "Prof-speciality",
+                "relationship": "Husband",
+                "race": "White",
+                "sex": "Male",
+                "capital_gain": 0,
+                "capital_loss": 35,
+                "hours_per_week": 36,
+                "native_country": "India"
+            }
         }
 
 
